@@ -1,7 +1,4 @@
 
-
-
-
 export const state = () => ({
     // 'hogeFromStore' という名前の状態を管理する
     loading: false
