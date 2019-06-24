@@ -2,43 +2,39 @@
      <div id="news">
         <div v-scroll="handleScroll" class="news-contents">
             <h2>NEWS</h2>
-            <table>
-                <tr>
-                    <td>1906-02-01</td>
-                    <td>「I love you」を「月が綺麗ですね」と略したことで炎上
-                    </td>
-                    <td>どうも日本には、西洋諸国に比べてウィットやユーモアが根づいてないように思われる。</td>
-                    <td><a href="#" class="arrow sample5-2"></a></td>
-                </tr>
-                <tr>
-                    <td>2000-04-03</td>
-                    <td>千円札のモデルに採用</td>
-                    <td>ただ一万円札のモデルが福澤諭吉である意味がわからない。</td>
-                    <td><a href="#" class="arrow sample5-2"></a></td>
-                </tr>
-                <tr>
-                    <td>1893-05-02</td>
-                    <td>イギリス留学でメンヘラになる</td>
-                    <td>このままでは日本がオワコンになる危険性がある。</td>
-                    <td><a href="#" class="arrow sample5-2"></a></td>
-                </tr>
-            </table>
+            <div class="list-area">
+                <dl>
+                    <dt class="date">2019/08/16</dt>
+                    <dd class="event appear"><span>イベント出演</span></dd>
+                    <dd class="detail">『SUMMER SONIC 2019』参戦決定！</dd>
+                </dl>
+                <dl>
+                    <dt class="date">2019-06-23</dt>
+                    <dd class="event published"><span>メディア掲載情報</span></dd>
+                    <dd class="detail">フジテレビ番組「ワイドナショー」に出演しました。</dd>    
+                </dl>
+                <dl>
+                    <dt class="date">2019-02-13</dt>
+                    <dd class="event published"><span>メディア掲載情報</span></dd>
+                    <dd class="detail">「週刊文春」にてコラム「タピ活はじめました」の連載を開始しました。</dd>   
+                </dl>
+            </div>
             <transition @enter="onEnter" @before-enter="onBeforeEnter" @before-leave="onBeforeLeave">
             <table v-show="show" class="hide-table">
                 <tr>
-                    <td>2019-02-01</td>
+                    <td class="date">2019-02-01</td>
+                    <td>テキスト</td>
+                    <td>ニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュース</td>
+                    <td><a href="#"><i class="fas fa-chevron-right"></i></a></td>
+                </tr>
+                <tr>
+                    <td class="date">2019-02-01</td>
                     <td>テキスト</td>
                     <td>ニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュース</td>
                     <td><a href="#" class="arrow sample5-2"></a></td>
                 </tr>
                 <tr>
-                    <td>2019-02-01</td>
-                    <td>テキスト</td>
-                    <td>ニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュース</td>
-                    <td><a href="#" class="arrow sample5-2"></a></td>
-                </tr>
-                <tr>
-                    <td>2019-02-01</td>
+                    <td class="date">2019-02-01</td>
                     <td>テキスト</td>
                     <td>ニュースニュースニュースニュースニュースニュース</td>
                     <td><a href="#" class="arrow sample5-2"></a></td>
@@ -68,7 +64,6 @@ export default {
             this.show=!this.show
         },
         onBeforeEnter(el){
-            alert();
             el.style.height=0;
         },
         onEnter(el){
@@ -104,16 +99,50 @@ export default {
             padding:40px 0;
         }
 
-        table{
+        .list-area{
             width: 100%;
         }
 
-        tr{
+        dl{
             border-top:1px solid #F2F2F2;
+            padding:20px 0;
         }
 
-        td{
-            padding:40px;
+        dt,dd{
+            display: inline-block;
+        }
+
+        .date{
+           width:12%;
+        }
+
+        .event{
+           width:20%;
+           text-align: center;
+           padding:10px 5px;
+           color:#fff;
+        }
+
+        .detail{
+            padding:10px;
+        }
+
+        .event .appear,
+        .event .published{
+            color:#fff;
+            padding:5px 30px;
+        }
+
+        .event.appear{
+            background:#A24040;
+        }
+
+        .event.published{
+            background: #566A8E;
+        }
+
+        .detail{
+         
         }
 
        .button {

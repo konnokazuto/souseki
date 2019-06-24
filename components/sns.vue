@@ -8,7 +8,9 @@
         </section>
         <section v-scroll="handleScroll" class="sns-contents instagram">
             <h3><i class="fab fa-instagram fa-2x"></i></h3>
-            <iframe src="https://snapwidget.com/embed/700869" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; width:100%; "></iframe>
+           <!-- SnapWidget -->
+<script src="https://snapwidget.com/js/snapwidget.js"></script>
+<iframe src="https://snapwidget.com/embed/700869" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; "></iframe>
         </section>
         <section v-scroll="handleScroll" class="sns-contents youtube">
             <h3><i class="fab fa-youtube fa-2x"></i></h3>
